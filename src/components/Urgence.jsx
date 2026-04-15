@@ -1,41 +1,34 @@
-import { useEffect, useRef } from 'react'
+import { useReveal } from '../hooks/useReveal'
 
 const AVANTAGES = [
-  { icon: '⚡', title: 'Intervention sous 2h', desc: 'Sur toute l\'Île-de-France pour les urgences chantier.' },
-  { icon: '📞', title: 'Astreinte 24h/7j', desc: 'Une ligne dédiée toujours disponible : 07 62 99 59 17.' },
-  { icon: '🔧', title: 'Techniciens qualifiés', desc: 'Habilitations électriques B2V, BR, BC — NF C 18-510.' },
-  { icon: '✅', title: 'Matériel en stock', desc: 'Armoires, câbles, coffrets disponibles immédiatement.' },
+  { icon: '⚡', title: 'Intervention en moins de 2h', desc: 'Sur toute l\'Île-de-France pour les urgences bloquantes de chantier.' },
+  { icon: '📞', title: 'Astreinte 24h/7j', desc: 'Ligne dédiée disponible en permanence : 07 62 99 59 17.' },
+  { icon: '🔧', title: 'Techniciens habilités', desc: 'Habilitations électriques B2V, BR, BC conformes à la NF C 18-510.' },
+  { icon: '✅', title: 'Matériel disponible immédiatement', desc: 'Armoires, coffrets, câbles et protections en stock permanent.' },
 ]
 
 const DEPANNAGES = [
-  'Panne d\'armoire de comptage',
+  'Panne d\'armoire de comptage ou de compteur',
   'Disjoncteur différentiel déclenché',
-  'Coupure alimentation grue',
-  'Défaut d\'isolement câble',
-  'Panne d\'éclairage de sécurité',
+  'Coupure d\'alimentation grue ou engin',
+  'Défaut d\'isolement sur câble ou équipement',
+  'Panne d\'éclairage de sécurité (BAES)',
   'Surtension ou sous-tension réseau',
-  'Remplacement de matériel endommagé',
-  'Mise en conformité suite à contrôle',
+  'Remplacement de matériel endommagé ou volé',
+  'Mise en conformité suite à contrôle ou rapport',
+  'Défaut de mise à la terre',
+  'Court-circuit ou fusible claqué',
 ]
 
 export default function Urgence() {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }),
-      { threshold: 0.1 }
-    )
-    sectionRef.current?.querySelectorAll('.section-animate').forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useReveal()
 
   return (
     <section id="urgence" ref={sectionRef}
       className="py-20 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #111C35 0%, #1A2744 60%, #1E3057 100%)' }}
     >
-      {/* Animated diagonal stripe */}
+      {/* Diagonal stripe background */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         {[...Array(8)].map((_, i) => (
           <div key={i}
@@ -61,8 +54,8 @@ export default function Urgence() {
             URGENCE &amp; <span className="text-[#F5A623]">DÉPANNAGE</span>
           </h2>
           <p className="text-white/65 max-w-xl mx-auto text-base leading-relaxed">
-            Un problème électrique bloque votre chantier ? Notre équipe intervient
-            rapidement, de jour comme de nuit, pour remettre votre installation en service.
+            Un problème électrique immobilise votre chantier ? Notre équipe intervient
+            de jour comme de nuit pour remettre votre installation en service rapidement.
           </p>
         </div>
 
@@ -75,7 +68,7 @@ export default function Urgence() {
               LIGNE ASTREINTE — URGENCES CHANTIER
             </p>
             <p className="text-[#1A2744]/70 text-sm mt-1">
-              Disponible 24h/24 — 7j/7 — Île-de-France
+              Disponible 24h/24 — 7j/7 — Toute l'Île-de-France
             </p>
           </div>
           <a href="tel:0762995917"
@@ -115,7 +108,7 @@ export default function Urgence() {
           {/* Right: types de dépannage */}
           <div className="section-animate">
             <h3 className="text-white font-['Oswald'] text-2xl font-semibold mb-5">
-              Pannes & Incidents traités
+              Pannes &amp; Incidents traités
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {DEPANNAGES.map(item => (
@@ -132,7 +125,7 @@ export default function Urgence() {
               <p className="text-white/60 text-sm leading-relaxed">
                 <span className="text-[#F5A623] font-semibold">Délai d'intervention :</span>{' '}
                 Moins de 2h en Île-de-France pour les urgences bloquantes.
-                Devis systématique avant toute intervention.
+                Devis établi systématiquement avant toute intervention.
               </p>
             </div>
           </div>

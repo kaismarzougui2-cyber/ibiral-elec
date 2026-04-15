@@ -1,38 +1,46 @@
-import { useEffect, useRef } from 'react'
+import { useReveal } from '../hooks/useReveal'
 
 const POINTS = [
-  { label: 'L\'installation électrique et plomberie provisoires' },
-  { label: 'Les infrastructures CFO / CFA' },
-  { label: 'Les solutions énergétiques de chantier' },
-  { label: 'IRVE — Bornes de recharge véhicules électriques' },
-  { label: 'Les études techniques et mises en service' },
+  { label: 'L\'installation électrique provisoire de chantier (CFO)' },
+  { label: 'La plomberie provisoire et l\'alimentation en eau des chantiers' },
+  { label: 'Les infrastructures courants faibles (CFA) et réseaux data' },
+  { label: 'Les solutions IRVE — bornes de recharge pour véhicules électriques' },
+  { label: 'La réhabilitation électrique de bâtiments en travaux lourds' },
+  { label: 'Les études techniques, plans d\'exécution et mises en service' },
 ]
 
 const DIFFERENCES = [
-  { icon: '🎯', title: 'Expertise chantier', desc: 'Connaissance des contraintes réelles du BTP et des normes en vigueur.' },
-  { icon: '⚡', title: 'Réactivité forte', desc: 'Réponse rapide aux demandes de devis, délais tenus, astreinte disponible.' },
-  { icon: '🔒', title: 'Conformité garantie', desc: 'Toutes nos installations respectent la NF C 15-100 et les règles CONSUEL.' },
-  { icon: '🤝', title: 'Un seul interlocuteur', desc: 'De l\'étude à la mise en service : vous n\'avez qu\'un seul contact.' },
+  {
+    icon: '🎯',
+    title: 'Expertise chantier confirmée',
+    desc: 'Maîtrise des contraintes réelles du BTP : phasage, coactivité, délais serrés et normes en vigueur.',
+  },
+  {
+    icon: '⚡',
+    title: 'Réactivité maximale',
+    desc: 'Réponse aux devis sous 24h, délais respectés, astreinte disponible pour les urgences.',
+  },
+  {
+    icon: '🔒',
+    title: 'Conformité garantie',
+    desc: 'Toutes nos installations respectent la NF C 15-100, les règles CONSUEL et les exigences COPREC.',
+  },
+  {
+    icon: '🤝',
+    title: 'Un seul interlocuteur',
+    desc: 'Électricité ET plomberie provisoires gérées par un seul prestataire, de l\'étude à la livraison.',
+  },
 ]
 
 const STATS = [
   { value: '100%', label: 'Conforme NF C 15-100' },
   { value: '24/7', label: 'Astreinte technique' },
-  { value: '< 2h', label: 'Intervention d\'urgence' },
+  { value: '< 2h', label: 'Intervention d\'urgence IDF' },
   { value: 'IDF', label: 'Île-de-France' },
 ]
 
 export default function About() {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }),
-      { threshold: 0.1 }
-    )
-    sectionRef.current?.querySelectorAll('.section-animate').forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useReveal()
 
   return (
     <>
@@ -49,17 +57,18 @@ export default function About() {
             <h2 className="font-['Oswald'] font-bold text-4xl sm:text-5xl text-[#1A2744] mb-3">
               QUI <span className="text-[#F5A623]">SOMMES-NOUS ?</span>
             </h2>
-            <p className="text-[#6B7A99] font-semibold text-base mb-6 leading-relaxed">
+            <p className="text-[#6B7A99] font-semibold text-base mb-4 leading-relaxed">
               IBIRAL ELEC est une entreprise spécialisée dans la mise en place d'alimentations
-              électriques temporaires pour le secteur du BTP, basée à Colombes (92).
+              électriques temporaires de chantiers pour le secteur du BTP, basée à Colombes (92).
             </p>
             <p className="text-[#4A5568] text-sm leading-relaxed mb-6">
               Nous intervenons sur l'ensemble de l'Île-de-France pour accompagner les promoteurs,
-              entreprises générales et maîtres d'œuvre dans leurs besoins en installations
-              provisoires — de l'ouverture de chantier jusqu'à la livraison.
+              entreprises générales, maîtres d'œuvre et conducteurs de travaux dans tous leurs
+              besoins en installations provisoires — de l'ouverture du chantier jusqu'à la
+              livraison de l'ouvrage.
             </p>
 
-            <p className="font-['Oswald'] font-semibold text-[#1A2744] mb-3">Spécialisés dans :</p>
+            <p className="font-['Oswald'] font-semibold text-[#1A2744] mb-3">Nos domaines d'expertise :</p>
             <ul className="flex flex-col gap-3 mb-8">
               {POINTS.map(({ label }) => (
                 <li key={label} className="flex items-start gap-3 text-sm text-[#4A5568]">

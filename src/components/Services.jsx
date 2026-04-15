@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useReveal } from '../hooks/useReveal'
 
 const SERVICES = [
   {
@@ -14,13 +14,14 @@ const SERVICES = [
     title: 'Armoires de Comptage',
     subtitle: 'Tarif Bleu · Jaune · Vert',
     items: [
-      'Armoires Tarif Bleu (jusqu\'à 36 kVA)',
-      'Armoires Tarif Jaune (36 à 250 kVA)',
-      'Armoires Tarif Vert (> 250 kVA)',
-      'Coffrets de chantier normalisés',
-      'Distribution électrique provisoire',
-      'Protections différentielles 30 mA / 300 mA',
+      'Armoires Tarif Bleu jusqu\'à 36 kVA (monophasé et triphasé)',
+      'Armoires Tarif Jaune de 36 à 250 kVA',
+      'Armoires Tarif Vert au-delà de 250 kVA',
+      'Coffrets de chantier normalisés NF EN 60439-4',
+      'Distribution électrique provisoire multi-départs',
+      'Protections différentielles 30 mA et 300 mA',
       'Mise à la terre et liaisons équipotentielles',
+      'Raccordement au réseau ENEDIS et mise en service',
     ],
   },
   {
@@ -34,13 +35,14 @@ const SERVICES = [
     subtitle: 'Toutes puissances',
     featured: true,
     items: [
-      'Alimentation grues de chantier (toutes puissances)',
-      'Armoires pied de grue',
-      'Alimentation ascenseurs et monte-charges',
-      'Alimentation bungalows et cantonnements',
-      'Colonnes montantes provisoires',
-      'Réseaux d\'étages et alimentation par niveau',
-      'Câbles aériens et souterrains',
+      'Alimentation grues à tour toutes puissances (15 à 132 kW)',
+      'Armoires pied de grue conformes NF EN 60204',
+      'Alimentation ascenseurs et monte-matériaux de chantier',
+      'Alimentation monte-charges et plateformes élévatrices',
+      'Alimentation bungalows, cantonnements et baraquements',
+      'Colonnes montantes provisoires par niveau',
+      'Réseaux d\'étages et distribution horizontale',
+      'Câblage aérien sur portiques et câblage souterrain',
     ],
   },
   {
@@ -55,12 +57,13 @@ const SERVICES = [
     subtitle: 'Solution clé en main',
     items: [
       'Alimentation électrique complète des bases vie',
-      'Alimentation en eau des installations',
-      'Mise en place de points d\'eau de chantier',
-      'Raccordements des sanitaires et douches',
-      'Évacuation des eaux usées',
-      'Chauffage et climatisation provisoires',
-      'Éclairage intérieur et extérieur',
+      'Raccordement eau potable et réseaux d\'alimentation',
+      'Mise en place de points d\'eau et robinets de chantier',
+      'Raccordements sanitaires, douches et vestiaires',
+      'Évacuation des eaux usées et eaux vannes',
+      'Alimentation chauffage et climatisation provisoires',
+      'Éclairage intérieur et extérieur des zones vie',
+      'Passage de gaines et câbles dans les modules',
     ],
   },
   {
@@ -75,13 +78,14 @@ const SERVICES = [
     title: 'Éclairage Provisoire',
     subtitle: 'Sécurité & conformité',
     items: [
-      'Éclairage de circulation et de chantier',
-      'Éclairage des sous-sols et parkings',
-      'Éclairage des cages d\'escaliers',
-      'Éclairage extérieur et périmétrique',
-      'Éclairage de sécurité (BAES)',
-      'Balisage et signalisation lumineuse',
-      'Projecteurs de chantier LED',
+      'Éclairage de circulation des voies piétonnes et engins',
+      'Éclairage des sous-sols, parkings et espaces confinés',
+      'Éclairage des cages d\'escaliers et paliers',
+      'Éclairage extérieur et périmétrique de chantier',
+      'Blocs de secours (BAES) et éclairage de sécurité',
+      'Balisage lumineux et signalisation de chantier',
+      'Projecteurs de chantier LED haute puissance',
+      'Détecteurs de présence et commandes automatiques',
     ],
   },
   {
@@ -95,13 +99,14 @@ const SERVICES = [
     title: 'CFO / CFA / IRVE',
     subtitle: 'Infrastructures techniques',
     items: [
-      'Courants forts (CFO) – distributions HTB/HTA/BT',
-      'Courants faibles (CFA) – réseau data, téléphonie',
-      'IRVE – Bornes de recharge véhicules électriques',
-      'Études techniques et dimensionnement',
-      'Mise en service et consignation',
-      'Mise en conformité NF C 15-100',
-      'Vérifications COPREC et CONSUEL',
+      'Courants forts (CFO) — distributions HTA/BT, tgbt',
+      'Courants faibles (CFA) — réseau data, téléphonie, fibre',
+      'IRVE — Bornes de recharge véhicules électriques (P7/T2)',
+      'Études techniques, notes de calcul et plans d\'exécution',
+      'Mise en service, essais et vérification des installations',
+      'Mise en conformité NF C 15-100 et NF C 14-100',
+      'Attestations COPREC et dossiers CONSUEL',
+      'Réhabilitation électrique de bâtiments existants',
     ],
   },
   {
@@ -115,30 +120,20 @@ const SERVICES = [
     title: 'Maintenance & Dépannage',
     subtitle: 'Réactivité maximale',
     items: [
-      'Dépannage urgent sur chantier (sous 2h)',
-      'Vérification périodique des installations',
-      'Remplacement de matériel défectueux',
-      'Mise en conformité réglementaire',
-      'Diagnostic et thermographie infrarouge',
-      'Suivi technique tout au long du chantier',
+      'Dépannage urgent sur chantier en moins de 2 heures',
+      'Vérification et contrôle périodique des installations',
+      'Remplacement de matériel défectueux ou hors norme',
+      'Mise en conformité après rapport de contrôle',
+      'Diagnostic électrique et détection de défaut d\'isolement',
+      'Suivi technique hebdomadaire tout au long du chantier',
+      'Astreinte technique disponible 7 jours sur 7',
+      'Contrat de maintenance préventive et curative',
     ],
   },
 ]
 
 export default function Services() {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible')
-      }),
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    )
-    const cards = sectionRef.current?.querySelectorAll('.section-animate')
-    cards?.forEach(c => observer.observe(c))
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useReveal()
 
   return (
     <section id="services" className="py-20 bg-[#F4F6FA]" ref={sectionRef}>
@@ -206,8 +201,7 @@ function ServiceCard({ service, delay }) {
           ${featured ? 'text-white' : 'text-[#1A2744]'}`}>
           {title}
         </h3>
-        <span className={`text-xs font-semibold uppercase tracking-wide
-          ${featured ? 'text-[#F5A623]' : 'text-[#F5A623]'}`}>
+        <span className="text-xs font-semibold uppercase tracking-wide text-[#F5A623]">
           {subtitle}
         </span>
       </div>
@@ -216,7 +210,7 @@ function ServiceCard({ service, delay }) {
       <ul className="flex flex-col gap-2.5">
         {items.map(item => (
           <li key={item} className="flex items-start gap-2.5 text-sm">
-            <span className={`flex-shrink-0 mt-0.5 w-4.5 h-4.5 rounded flex items-center justify-center text-[10px] font-bold
+            <span className={`flex-shrink-0 mt-0.5 w-[18px] h-[18px] rounded flex items-center justify-center text-[10px] font-bold
               ${featured ? 'bg-[#F5A623]/20 text-[#F5A623]' : 'bg-[#1A2744]/8 text-[#1A2744]'}`}>
               ✓
             </span>

@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
+import { useReveal } from '../hooks/useReveal'
 
 const SERVICES_OPTIONS = [
   'Armoire de comptage Tarif Bleu/Jaune/Vert',
@@ -68,17 +69,8 @@ const CONTACT_INFO = [
 ]
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle') // idle | sending | sent | error
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }),
-      { threshold: 0.1 }
-    )
-    sectionRef.current?.querySelectorAll('.section-animate').forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  const [status] = useState('idle')
+  const sectionRef = useReveal()
 
   return (
     <section id="contact" className="py-20 bg-[#F4F6FA]" ref={sectionRef}>
