@@ -916,9 +916,17 @@ p  { margin-bottom: .75rem; }
 .footer-brand p {
   font-size: .9rem;
   color: rgba(255,255,255,.55);
-  margin-top: 12px;
+  margin-top: 8px;
   line-height: 1.6;
   max-width: 280px;
+}
+.footer-tagline {
+  font-family: var(--font-head);
+  font-size: .8rem !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--yellow) !important;
+  margin-top: 6px !important;
 }
 .footer-links, .footer-contact {
   display: flex;
