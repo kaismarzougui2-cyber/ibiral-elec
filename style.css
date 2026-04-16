@@ -288,6 +288,22 @@ p  { margin-bottom: .75rem; }
   gap: 10px;
 }
 .logo img { height: 38px; width: auto; }
+.logo-img  { height: 44px; width: auto; object-fit: contain; }
+
+/* ── Logo décoratif en section ── */
+.section-logo-deco {
+  display: block;
+  margin: 0 auto 20px;
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  opacity: .15;
+  filter: grayscale(1) brightness(0);
+}
+.section-dark .section-logo-deco {
+  opacity: .12;
+  filter: grayscale(1) brightness(10);
+}
 .logo-text { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
 .logo-ibiral { color: var(--white); }
 .logo-elec   { color: var(--yellow); }
