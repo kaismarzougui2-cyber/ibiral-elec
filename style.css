@@ -485,7 +485,20 @@ p  { margin-bottom: .75rem; }
   color: var(--yellow);
 }
 .card-icon { margin-bottom: 20px; }
-.service-card h3 { color: var(--navy); margin-bottom: 16px; font-size: 1.1rem; }
+.service-card h3 { color: var(--navy); margin-bottom: 10px; font-size: 1.1rem; }
+.card-accroche {
+  font-size: .92rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+.service-card.card-featured .card-accroche {
+  color: rgba(255,255,255,.75);
+  border-bottom-color: rgba(255,255,255,.15);
+}
 .card-list { display: flex; flex-direction: column; gap: 8px; }
 .card-list li {
   display: flex;
