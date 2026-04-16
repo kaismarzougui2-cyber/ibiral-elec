@@ -466,6 +466,60 @@ p  { margin-bottom: .75rem; }
 .section-dark .text-block .lead { color: var(--yellow); }
 
 /* ====================================================
+   ENGAGEMENT (HISTOIRE & VALEURS)
+   ==================================================== */
+.engagement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.engagement-grid p { color: rgba(255,255,255,.82); }
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 4px;
+}
+.value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(245,166,35,.2);
+  border-radius: 10px;
+  padding: 18px 16px;
+}
+.value-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(245,166,35,.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.value-item strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: .9rem;
+  color: var(--yellow);
+  margin-bottom: 6px;
+  letter-spacing: .03em;
+}
+.value-item p {
+  font-size: .85rem;
+  color: rgba(255,255,255,.65) !important;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (max-width: 960px) {
+  .engagement-grid { grid-template-columns: 1fr; gap: 40px; }
+  .values-grid { grid-template-columns: 1fr; }
+}
+
+/* ====================================================
    SERVICE CARDS
    ==================================================== */
 .cards-grid {
