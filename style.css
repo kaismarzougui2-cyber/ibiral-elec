@@ -105,6 +105,13 @@ p  { margin-bottom: .75rem; }
 
 .section-header { margin-bottom: 56px; }
 .section-header.centered { text-align: center; }
+.section-intro {
+  max-width: 680px;
+  margin: 16px auto 0;
+  font-size: .97rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
 
 /* ── Tags ── */
 .section-tag {
