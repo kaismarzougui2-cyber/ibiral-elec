@@ -277,10 +277,10 @@ p  { margin-bottom: .75rem; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(14, 45, 100, .96);
+  background: rgba(255, 255, 255, .97);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid var(--border);
   transition: box-shadow var(--transition);
 }
 .site-header.scrolled { box-shadow: var(--shadow-lg); }
@@ -322,7 +322,7 @@ p  { margin-bottom: .75rem; }
   font-weight: 400;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.5);
+  color: var(--text-muted);
   line-height: 1;
 }
 .footer-logo { font-size: 1.7rem; }
@@ -333,7 +333,7 @@ p  { margin-bottom: .75rem; }
   gap: 4px;
 }
 .main-nav a {
-  color: rgba(255,255,255,.82);
+  color: var(--text-dark);
   font-family: var(--font-head);
   font-size: .9rem;
   letter-spacing: .04em;
@@ -342,7 +342,7 @@ p  { margin-bottom: .75rem; }
   border-radius: 6px;
   transition: color var(--transition), background var(--transition);
 }
-.main-nav a:hover { color: var(--yellow); background: rgba(245,166,35,.1); }
+.main-nav a:hover { color: var(--blue); background: rgba(26,111,212,.08); }
 .main-nav .btn { margin-left: 8px; padding: 10px 22px; font-size: .88rem; }
 
 .burger {
@@ -358,7 +358,7 @@ p  { margin-bottom: .75rem; }
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--white);
+  background: var(--navy);
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
 }
@@ -510,8 +510,8 @@ p  { margin-bottom: .75rem; }
 /* ====================================================
    ABOUT (QUI SOMMES-NOUS)
    ==================================================== */
-.section-dark .text-block h2 { color: var(--white); }
-.section-dark .text-block .lead { color: var(--yellow); }
+.section-dark .text-block h2 { color: var(--text-dark); }
+.section-dark .text-block .lead { color: var(--blue); }
 
 /* ====================================================
    ENGAGEMENT (HISTOIRE & VALEURS)
@@ -700,10 +700,10 @@ p  { margin-bottom: .75rem; }
 .sub-heading {
   font-size: 1rem;
   letter-spacing: .08em;
-  color: var(--yellow);
+  color: var(--blue);
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(245,166,35,.3);
+  border-bottom: 2px solid rgba(26,111,212,.25);
   font-family: var(--font-head);
   font-weight: 600;
 }
@@ -1171,8 +1171,9 @@ p  { margin-bottom: .75rem; }
    FOOTER
    ==================================================== */
 .site-footer {
-  background: var(--navy-deep);
-  color: rgba(255,255,255,.7);
+  background: var(--white);
+  color: var(--text-muted);
+  border-top: 3px solid var(--blue);
   padding: 64px 0 0;
 }
 .footer-inner {
@@ -1183,7 +1184,7 @@ p  { margin-bottom: .75rem; }
 }
 .footer-brand p {
   font-size: .9rem;
-  color: rgba(255,255,255,.55);
+  color: var(--text-muted);
   margin-top: 8px;
   line-height: 1.6;
   max-width: 280px;
@@ -1193,7 +1194,7 @@ p  { margin-bottom: .75rem; }
   font-size: .8rem !important;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--yellow) !important;
+  color: var(--blue) !important;
   margin-top: 6px !important;
 }
 .footer-links, .footer-contact {
@@ -1206,17 +1207,17 @@ p  { margin-bottom: .75rem; }
   font-size: .82rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: var(--navy);
   margin-bottom: 8px;
 }
 .footer-links a, .footer-contact a, .footer-contact span {
   font-size: .9rem;
-  color: rgba(255,255,255,.6);
+  color: var(--text-muted);
   transition: color var(--transition);
 }
-.footer-links a:hover, .footer-contact a:hover { color: var(--yellow); }
+.footer-links a:hover, .footer-contact a:hover { color: var(--blue); }
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.08);
+  border-top: 1px solid var(--border);
   padding: 20px 0;
 }
 .footer-bottom .container {
@@ -1226,17 +1227,17 @@ p  { margin-bottom: .75rem; }
   flex-wrap: wrap;
   gap: 8px;
   font-size: .82rem;
-  color: rgba(255,255,255,.4);
+  color: var(--text-muted);
 }
 .legal-mentions {
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid var(--border);
   padding: 18px 0;
   font-size: .78rem;
-  color: rgba(255,255,255,.35);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 .legal-mentions .container { max-width: 900px; text-align: center; }
-.legal-mentions strong { color: rgba(255,255,255,.55); }
+.legal-mentions strong { color: var(--text-dark); }
 
 /* ====================================================
    RESPONSIVE
@@ -1268,10 +1269,10 @@ p  { margin-bottom: .75rem; }
     top: 70px;
     left: 0;
     right: 0;
-    background: var(--navy-deep);
+    background: var(--white);
     padding: 24px;
     gap: 4px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid var(--border);
     z-index: 999;
   }
   .main-nav.open a { padding: 12px 16px; border-radius: var(--radius); }
