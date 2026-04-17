@@ -15,7 +15,7 @@
   --yellow-dark:#D9AE00;   /* Yellow Hover     – survol jaune                     */
   /* ── Neutres (teinté bleu) ── */
   --white:      #FFFFFF;
-  --light-bg:   #F4F8FE;   /* Background clair – bleu glacé                       */
+  --light-bg:   #FFFFFF;   /* Background général – blanc pur                    */
   --text-dark:  #0F1D33;   /* Texte sombre     – corps, titres                    */
   --text-muted: #5E75A0;   /* Texte secondaire – labels, descriptions             */
   --border:     #CAD8EF;   /* Bordure          – séparateurs, cartes              */
@@ -82,15 +82,15 @@ p  { margin-bottom: .75rem; }
   text-transform: uppercase;
 }
 .btn-primary {
-  background: var(--yellow);
-  color: var(--navy);
-  border-color: var(--yellow);
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
 }
 .btn-primary:hover {
-  background: var(--yellow-dark);
-  border-color: var(--yellow-dark);
+  background: var(--navy);
+  border-color: var(--navy);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245,166,35,.4);
+  box-shadow: 0 6px 20px rgba(26,111,212,.4);
 }
 .btn-outline {
   background: transparent;
@@ -611,6 +611,22 @@ p  { margin-bottom: .75rem; }
   border-color: rgba(245,166,35,.6);
   color: var(--yellow);
 }
+/* ── Image en tête de carte ── */
+.card-img-wrap {
+  margin: -32px -28px 24px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.service-card:hover .card-img-wrap img { transform: scale(1.04); }
+
 .card-icon { margin-bottom: 20px; }
 .service-card h3 { color: var(--navy); margin-bottom: 10px; font-size: 1.1rem; }
 .card-accroche {
