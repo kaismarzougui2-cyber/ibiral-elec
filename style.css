@@ -865,7 +865,8 @@ p  { margin-bottom: .75rem; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
-.qualif-block { margin-bottom: 0; }
+.qualif-block { margin-bottom: 24px; }
+.qualif-block:last-child { margin-bottom: 0; }
 .qualif-block-head {
   display: flex;
   align-items: center;
