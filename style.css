@@ -892,6 +892,22 @@ p  { margin-bottom: .75rem; }
 }
 .qualif-block { margin-bottom: 24px; }
 .qualif-block:last-child { margin-bottom: 0; }
+.qualif-sub {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+.qualif-sub-title {
+  font-family: var(--font-head);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 3px solid var(--yellow);
+}
 .qualif-block-head {
   display: flex;
   align-items: center;
