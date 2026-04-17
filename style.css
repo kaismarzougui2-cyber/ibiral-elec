@@ -388,9 +388,9 @@ p  { margin-bottom: .75rem; }
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-    rgba(7,27,69,.94) 0%,
-    rgba(14,45,100,.88) 50%,
-    rgba(7,27,69,.82) 100%);
+    rgba(7,27,69,.78) 0%,
+    rgba(14,45,100,.68) 50%,
+    rgba(7,27,69,.60) 100%);
   z-index: 0;
 }
 .hero-content {
@@ -447,18 +447,19 @@ p  { margin-bottom: .75rem; }
 .hero .phone-link { color: var(--white); font-size: 1.05rem; }
 .hero .phone-link:hover { color: var(--yellow); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; }
-/* ── Logo watermark derrière le contenu hero ── */
+/* ── Logo en bas à gauche du hero ── */
 .hero-logo-watermark {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(480px, 65vw);
+  bottom: 80px;
+  left: 40px;
+  width: min(200px, 30vw);
   opacity: 1;
-  z-index: 2;
+  z-index: 4;
   pointer-events: none;
-  filter: brightness(10);
   user-select: none;
+}
+@media (max-width: 640px) {
+  .hero-logo-watermark { bottom: 60px; left: 20px; width: min(140px, 35vw); }
 }
 
 .hero-scroll-indicator {
