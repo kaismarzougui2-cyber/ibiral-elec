@@ -1,25 +1,33 @@
 /* ====================================================
    IBIRAL ELEC – Main Stylesheet
-   Color palette inspired by the brand brochure
+   Palette extraite du logo IBIRAL ELEC (2024-2025)
    ==================================================== */
 
 :root {
-  --navy:       #1E3A72;
-  --navy-deep:  #162D5A;
-  --navy-mid:   #243F80;
-  --yellow:     #F5A623;
-  --yellow-dark:#D4891A;
+  /* ── Piliers logo ── */
+  --navy:       #0E2D64;   /* Deep Blue Dark  – header, footer, sections sombres */
+  --navy-deep:  #071B45;   /* Deep Blue Deeper – hero, fond le plus sombre       */
+  --navy-mid:   #194B96;   /* Deep Blue Mid    – hover bleu, surfaces interméd.  */
+  --blue:       #1A6FD4;   /* Deep Blue pilier – boutons, liens, IBIRAL           */
+  --orange:     #F26419;   /* Electric Orange  – ELEC, CTA                        */
+  --orange-dark:#C94E0F;   /* Orange Hover     – survol orange                    */
+  --yellow:     #FFD100;   /* Flash Yellow     – éclair, badges, accents           */
+  --yellow-dark:#D9AE00;   /* Yellow Hover     – survol jaune                     */
+  /* ── Neutres (teinté bleu) ── */
   --white:      #FFFFFF;
-  --light-bg:   #F4F6FA;
-  --text-dark:  #1A2744;
-  --text-muted: #6B7A99;
-  --border:     #DDE3EE;
+  --light-bg:   #F4F8FE;   /* Background clair – bleu glacé                       */
+  --text-dark:  #0F1D33;   /* Texte sombre     – corps, titres                    */
+  --text-muted: #5E75A0;   /* Texte secondaire – labels, descriptions             */
+  --border:     #CAD8EF;   /* Bordure          – séparateurs, cartes              */
+  /* ── Typo & utilitaires ── */
   --font-head:  'Oswald', 'Arial Narrow', Arial, sans-serif;
   --font-body:  'Open Sans', Arial, sans-serif;
   --radius:     8px;
-  --shadow:     0 4px 24px rgba(30,58,114,.12);
-  --shadow-lg:  0 8px 40px rgba(30,58,114,.18);
+  --shadow:     0 4px 24px rgba(14,45,100,.12);
+  --shadow-lg:  0 8px 40px rgba(14,45,100,.20);
   --transition: .25s ease;
+  /* ── Gradient éclair ── */
+  --gradient-flash: linear-gradient(135deg, #071B45 0%, #1A6FD4 45%, #F26419 80%, #FFD100 100%);
 }
 
 /* ── Reset & base ── */
@@ -164,10 +172,10 @@ p  { margin-bottom: .75rem; }
   width: 20px;
   height: 20px;
   margin-top: 1px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%231A2744'/%3E%3Cpath d='M5.5 10.5l3 3 6-6' stroke='%23F5A623' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%230E2D64'/%3E%3Cpath d='M5.5 10.5l3 3 6-6' stroke='%23FFD100' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 .check-list-yellow li::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23F5A623'/%3E%3Cpath d='M5.5 10.5l3 3 6-6' stroke='%231A2744' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23FFD100'/%3E%3Cpath d='M5.5 10.5l3 3 6-6' stroke='%230F1D33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 .check-list-yellow li { color: rgba(255,255,255,.9); }
 
@@ -202,7 +210,7 @@ p  { margin-bottom: .75rem; }
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(245,166,35,0.08)' stroke-width='1'%3E%3Crect x='5' y='5' width='50' height='50' rx='4'/%3E%3Cpath d='M15 35l8-10 6 7 5-5 11 13'/%3E%3Ccircle cx='20' cy='22' r='5'/%3E%3C/g%3E%3C/svg%3E") center/60px repeat;
 }
 .img-chantier {
-  background: linear-gradient(135deg, #1E3A72 30%, #2E4A8A 100%);
+  background: linear-gradient(135deg, #0E2D64 30%, #1A6FD4 100%);
   box-shadow: var(--shadow-lg);
 }
 .img-chantier::before {
@@ -216,7 +224,7 @@ p  { margin-bottom: .75rem; }
   z-index: 1;
 }
 .img-equipe {
-  background: linear-gradient(135deg, #1E3A72 0%, #162D5A 100%);
+  background: linear-gradient(135deg, #0E2D64 0%, #071B45 100%);
   box-shadow: var(--shadow-lg);
 }
 .img-equipe::before {
@@ -269,7 +277,7 @@ p  { margin-bottom: .75rem; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(30, 58, 114, .96);
+  background: rgba(14, 45, 100, .96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.08);
@@ -305,8 +313,8 @@ p  { margin-bottom: .75rem; }
   filter: grayscale(1) brightness(10);
 }
 .logo-text { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
-.logo-ibiral { color: #1A6FD4; }
-.logo-elec   { color: #FF6600; }
+.logo-ibiral { color: #1A6FD4; }   /* Deep Blue pilier */
+.logo-elec   { color: #F26419; }   /* Electric Orange pilier */
 .logo-wrap   { display: flex; flex-direction: column; gap: 1px; }
 .logo-tagline {
   font-family: var(--font-body);
@@ -363,7 +371,7 @@ p  { margin-bottom: .75rem; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 40%, #2A3F70 100%);
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 40%, #1A6FD4 100%);
   overflow: hidden;
   padding-top: 70px;
 }
@@ -1067,7 +1075,7 @@ p  { margin-bottom: .75rem; }
 .form-group textarea::placeholder { color: #aab; }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-group select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231A2744' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230F1D33' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 40px;

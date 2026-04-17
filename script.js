@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bottom: '32px',
       left: '50%',
       transform: 'translateX(-50%) translateY(20px)',
-      background: type === 'success' ? '#1A2744' : '#c0392b',
+      background: type === 'success' ? '#0E2D64' : '#c0392b',
       color: '#fff',
       padding: '14px 28px',
       borderRadius: '8px',
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       zIndex: '9999',
       opacity: '0',
       transition: 'opacity .3s ease, transform .3s ease',
-      borderLeft: `4px solid ${type === 'success' ? '#F5A623' : '#e74c3c'}`,
+      borderLeft: `4px solid ${type === 'success' ? '#FFD100' : '#e74c3c'}`,
       maxWidth: '90vw',
       textAlign: 'center'
     });
@@ -143,8 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
       box-shadow: 0 0 0 3px rgba(231,76,60,.15) !important;
     }
     .main-nav a.active {
-      color: #F5A623 !important;
-      background: rgba(245,166,35,.1);
+      color: #FFD100 !important;
+      background: rgba(255,209,0,.1);
     }
   `;
   document.head.appendChild(style);
