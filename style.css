@@ -692,27 +692,28 @@ p  { margin-bottom: .75rem; }
 .clients-block { text-align: center; }
 .clients-label {
   font-family: var(--font-head);
-  font-size: .85rem;
-  letter-spacing: .12em;
+  font-size: 1rem;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.55);
-  margin-bottom: 18px;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 24px;
 }
 .clients-logos {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px 28px;
+  gap: 12px 36px;
 }
 .client-name {
   font-family: var(--font-head);
-  font-size: 1.05rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
   color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,.3);
 }
-.client-sep { color: var(--yellow); font-size: 1.2rem; }
+.client-sep { color: var(--yellow); font-size: 1.8rem; }
 @media (max-width: 960px) { .confiance-stats { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .confiance-stats { grid-template-columns: 1fr 1fr; } }
 
