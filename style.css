@@ -809,11 +809,22 @@ p  { margin-bottom: .75rem; }
 /* ====================================================
    NOS QUALIFICATIONS
    ==================================================== */
-.qualif-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+.qualif-card-merged {
   margin-top: 8px;
+}
+.qualif-dual {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 48px;
+  align-items: start;
+}
+.qualif-dual-sep {
+  background: var(--border);
+  align-self: stretch;
+}
+@media (max-width: 640px) {
+  .qualif-dual { grid-template-columns: 1fr; gap: 32px 0; }
+  .qualif-dual-sep { height: 1px; width: 100%; }
 }
 .qualif-card {
   background: #F8FAFD;
