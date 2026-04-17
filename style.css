@@ -447,6 +447,20 @@ p  { margin-bottom: .75rem; }
 .hero .phone-link { color: var(--white); font-size: 1.05rem; }
 .hero .phone-link:hover { color: var(--yellow); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; }
+/* ── Logo watermark derrière le contenu hero ── */
+.hero-logo-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(480px, 65vw);
+  opacity: .06;
+  z-index: 2;
+  pointer-events: none;
+  filter: brightness(10);
+  user-select: none;
+}
+
 .hero-scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -742,6 +756,20 @@ p  { margin-bottom: .75rem; }
   color: var(--navy);
 }
 .client-sep { color: var(--yellow); font-size: 1.8rem; }
+.client-group-eiffage {
+  display: flex;
+  align-items: center;
+  gap: 12px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.eiffage-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(0);
+}
 @media (max-width: 960px) { .confiance-stats { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .confiance-stats { grid-template-columns: 1fr 1fr; } }
 
@@ -811,20 +839,45 @@ p  { margin-bottom: .75rem; }
    ==================================================== */
 .qualif-card-merged {
   margin-top: 8px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.qualif-dual {
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  gap: 0 48px;
-  align-items: start;
+.qualif-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
 }
-.qualif-dual-sep {
+.qualifelec-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.qualif-brand-label {
+  font-family: var(--font-head);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.qualif-block { margin-bottom: 0; }
+.qualif-block-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.qualif-block-head .qualif-icon { margin-bottom: 0; }
+.qualif-block-head h3 { margin: 0; }
+.qualif-block-sep {
+  height: 1px;
   background: var(--border);
-  align-self: stretch;
-}
-@media (max-width: 640px) {
-  .qualif-dual { grid-template-columns: 1fr; gap: 32px 0; }
-  .qualif-dual-sep { height: 1px; width: 100%; }
+  margin: 24px 0;
 }
 .qualif-card {
   background: #F8FAFD;

@@ -95,6 +95,7 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
+    <img src="assets/logo.png" alt="" class="hero-logo-watermark" aria-hidden="true" />
     <div class="container hero-content hero-centered">
       <div class="hero-badge">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#F5A623" stroke="#F5A623" stroke-width="1"/></svg>
@@ -153,9 +154,12 @@
         <div class="clients-logos">
           <span class="client-name">CARL CONSTRUCTION</span>
           <span class="client-sep">·</span>
-          <span class="client-name">EIFFAGE ROUTE</span>
-          <span class="client-sep">·</span>
-          <span class="client-name">EIFFAGE GÉNIE CIVIL</span>
+          <div class="client-group-eiffage">
+            <img src="assets/eiffage-logo.png" alt="Eiffage" class="eiffage-logo" />
+            <span class="client-name">EIFFAGE ROUTE</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">EIFFAGE GÉNIE CIVIL</span>
+          </div>
         </div>
       </div>
     </div>
@@ -463,33 +467,47 @@
         <p class="section-intro">Des habilitations reconnues pour des installations conformes et sécurisées</p>
       </div>
       <div class="qualif-card qualif-card-merged">
-        <div class="qualif-dual">
-          <div class="qualif-dual-col">
+
+        <!-- Logo Qualifelec -->
+        <div class="qualif-brand">
+          <img src="assets/qualifelec-logo.png" alt="Qualifelec" class="qualifelec-logo" />
+          <span class="qualif-brand-label">Certifié Qualifelec</span>
+        </div>
+
+        <!-- Bloc IRVE -->
+        <div class="qualif-block">
+          <div class="qualif-block-head">
             <div class="qualif-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="11" height="18" rx="2" stroke="#F5A623" stroke-width="1.5"/><path d="M8 8h5M8 12h5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/><path d="M16 10h2a1 1 0 011 1v3a1 1 0 01-2 0" stroke="#F5A623" stroke-width="1.5"/></svg>
             </div>
             <h3>IRVE – P1 P2 P3</h3>
-            <p>Qualification pour l'installation de bornes de recharge pour véhicules électriques, de la borne résidentielle (P1) aux infrastructures collectives et rapide (P2/P3).</p>
-            <div class="qualif-badges">
-              <span class="qualif-badge">P1 – Résidentiel</span>
-              <span class="qualif-badge">P2 – Collectif</span>
-              <span class="qualif-badge">P3 – Charge rapide</span>
-            </div>
           </div>
-          <div class="qualif-dual-sep"></div>
-          <div class="qualif-dual-col">
+          <p>Qualification pour l'installation de bornes de recharge pour véhicules électriques, de la borne résidentielle (P1) aux infrastructures collectives et rapide (P2/P3).</p>
+          <div class="qualif-badges">
+            <span class="qualif-badge">P1 – Résidentiel</span>
+            <span class="qualif-badge">P2 – Collectif</span>
+            <span class="qualif-badge">P3 – Charge rapide</span>
+          </div>
+        </div>
+
+        <div class="qualif-block-sep"></div>
+
+        <!-- Bloc Maintenance & Étude -->
+        <div class="qualif-block">
+          <div class="qualif-block-head">
             <div class="qualif-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#F5A623" stroke-width="1.5"/></svg>
             </div>
             <h3>Maintenance &amp; Étude</h3>
-            <p>Habilitation pour la maintenance des installations électriques et la réalisation d'études techniques : diagnostic, mise en conformité et suivi de projet.</p>
-            <div class="qualif-badges">
-              <span class="qualif-badge">Maintenance préventive</span>
-              <span class="qualif-badge">Étude technique</span>
-              <span class="qualif-badge">Mise en conformité</span>
-            </div>
+          </div>
+          <p>Habilitation pour la maintenance des installations électriques et la réalisation d'études techniques : diagnostic, mise en conformité et suivi de projet.</p>
+          <div class="qualif-badges">
+            <span class="qualif-badge">Maintenance préventive</span>
+            <span class="qualif-badge">Étude technique</span>
+            <span class="qualif-badge">Mise en conformité</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
