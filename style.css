@@ -452,14 +452,14 @@ p  { margin-bottom: .75rem; }
   position: absolute;
   bottom: 80px;
   left: 40px;
-  width: min(200px, 30vw);
+  width: min(320px, 42vw);
   opacity: 1;
   z-index: 4;
   pointer-events: none;
   user-select: none;
 }
 @media (max-width: 640px) {
-  .hero-logo-watermark { bottom: 60px; left: 20px; width: min(140px, 35vw); }
+  .hero-logo-watermark { bottom: 60px; left: 20px; width: min(200px, 42vw); }
 }
 
 .hero-scroll-indicator {
