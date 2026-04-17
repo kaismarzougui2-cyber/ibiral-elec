@@ -305,8 +305,8 @@ p  { margin-bottom: .75rem; }
   filter: grayscale(1) brightness(10);
 }
 .logo-text { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
-.logo-ibiral { color: var(--white); }
-.logo-elec   { color: var(--yellow); }
+.logo-ibiral { color: #1A6FD4; }
+.logo-elec   { color: #FF6600; }
 .logo-wrap   { display: flex; flex-direction: column; gap: 1px; }
 .logo-tagline {
   font-family: var(--font-body);
@@ -410,6 +410,17 @@ p  { margin-bottom: .75rem; }
   margin-bottom: 24px;
 }
 .hero h1 { color: var(--white); margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,.4); }
+.hero h1 .logo-ibiral { text-shadow: 0 0 30px rgba(26,111,212,.4); }
+.hero h1 .logo-elec   { text-shadow: 0 0 30px rgba(255,102,0,.4); }
+.hero-h1-sub {
+  display: block;
+  font-size: clamp(.95rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: rgba(255,255,255,.8);
+  letter-spacing: .02em;
+  margin-top: 10px;
+  text-shadow: none;
+}
 .hero-sub { color: rgba(255,255,255,.75); font-size: 1.1rem; margin-bottom: 12px; }
 .hero-desc {
   color: rgba(255,255,255,.6);
@@ -640,6 +651,123 @@ p  { margin-bottom: .75rem; }
   border-bottom: 2px solid rgba(245,166,35,.3);
   font-family: var(--font-head);
   font-weight: 600;
+}
+
+/* ====================================================
+   SECTION CONFIANCE
+   ==================================================== */
+.confiance-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.clients-block { text-align: center; }
+.clients-label {
+  font-family: var(--font-head);
+  font-size: .85rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  margin-bottom: 18px;
+}
+.clients-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+.client-name {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--white);
+}
+.client-sep { color: var(--yellow); font-size: 1.2rem; }
+@media (max-width: 960px) { .confiance-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .confiance-stats { grid-template-columns: 1fr 1fr; } }
+
+/* ====================================================
+   NOS QUALIFICATIONS
+   ==================================================== */
+.qualif-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 8px;
+}
+.qualif-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(245,166,35,.25);
+  border-radius: 14px;
+  padding: 36px 30px;
+}
+.qualif-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(245,166,35,.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.qualif-card h3 {
+  color: var(--yellow);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+.qualif-card p { color: rgba(255,255,255,.75); font-size: .93rem; margin-bottom: 20px; }
+.qualif-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.qualif-badge {
+  background: rgba(245,166,35,.15);
+  border: 1px solid rgba(245,166,35,.4);
+  color: var(--yellow);
+  font-family: var(--font-head);
+  font-size: .75rem;
+  letter-spacing: .06em;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+@media (max-width: 640px) { .qualif-grid { grid-template-columns: 1fr; } }
+
+/* ====================================================
+   WHATSAPP FLOAT
+   ==================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 8000;
+  background: #25D366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,.5);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(37,211,102,.65);
+}
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,.4);
+  animation: wa-pulse 2s ease-in-out infinite;
+}
+@keyframes wa-pulse {
+  0%, 100% { transform: scale(1); opacity: .6; }
+  50%       { transform: scale(1.15); opacity: 0; }
 }
 
 /* ====================================================
