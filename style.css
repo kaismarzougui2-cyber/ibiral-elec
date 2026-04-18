@@ -467,8 +467,8 @@ p  { margin-bottom: .75rem; }
     top: 50%;
     transform: translate(-50%, -50%);
     width: min(260px, 70vw);
-    opacity: .18;
-    filter: brightness(10);
+    opacity: .25;
+    filter: none;
     z-index: 2;
   }
 }
