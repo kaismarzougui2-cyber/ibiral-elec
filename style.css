@@ -454,7 +454,7 @@ p  { margin-bottom: .75rem; }
   position: absolute;
   bottom: 80px;
   left: 40px;
-  width: min(320px, 42vw);
+  width: min(400px, 52.5vw);
   opacity: 1;
   z-index: 2;
   pointer-events: none;
@@ -473,7 +473,7 @@ p  { margin-bottom: .75rem; }
   .hero-logo-watermark { display: none; }
   .hero-logo-inline {
     display: block;
-    width: 56px;
+    width: 70px;
     height: auto;
     flex-shrink: 0;
   }
