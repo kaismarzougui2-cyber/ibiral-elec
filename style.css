@@ -463,13 +463,13 @@ p  { margin-bottom: .75rem; }
 @media (max-width: 640px) {
   .hero-logo-watermark {
     bottom: auto;
+    top: 90px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: min(260px, 70vw);
-    opacity: .25;
+    transform: translateX(-50%);
+    width: min(200px, 55vw);
+    opacity: 1;
     filter: none;
-    z-index: 2;
+    z-index: 4;
   }
 }
 
