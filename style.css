@@ -63,6 +63,8 @@ p  { margin-bottom: .75rem; }
 .lead { font-size: 1.15rem; font-weight: 600; }
 
 .text-yellow { color: var(--yellow); }
+.text-blue   { color: var(--blue); }
+.text-orange { color: var(--orange); }
 .lightning   { color: var(--yellow); }
 
 /* ── Buttons ── */
@@ -447,19 +449,28 @@ p  { margin-bottom: .75rem; }
 .hero .phone-link { color: var(--white); font-size: 1.05rem; }
 .hero .phone-link:hover { color: var(--yellow); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; }
-/* ── Logo en bas à gauche du hero ── */
+/* ── Logo en bas à gauche du hero (desktop) / centré derrière texte (mobile) ── */
 .hero-logo-watermark {
   position: absolute;
   bottom: 80px;
   left: 40px;
   width: min(320px, 42vw);
   opacity: 1;
-  z-index: 4;
+  z-index: 2;
   pointer-events: none;
   user-select: none;
 }
 @media (max-width: 640px) {
-  .hero-logo-watermark { bottom: 60px; left: 20px; width: min(200px, 42vw); }
+  .hero-logo-watermark {
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(260px, 70vw);
+    opacity: .18;
+    filter: brightness(10);
+    z-index: 2;
+  }
 }
 
 .hero-scroll-indicator {
