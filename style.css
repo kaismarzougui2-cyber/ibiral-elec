@@ -304,14 +304,14 @@ p  { margin-bottom: .75rem; }
 .section-logo-deco {
   display: block;
   margin: 0 auto 20px;
-  height: 52px;
+  height: 90px;
   width: auto;
   object-fit: contain;
-  opacity: .35;
+  opacity: 1;
   filter: none;
 }
 .section-dark .section-logo-deco {
-  opacity: .25;
+  opacity: 1;
   filter: none;
 }
 .logo-text { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
