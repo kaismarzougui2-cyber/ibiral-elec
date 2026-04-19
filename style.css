@@ -878,6 +878,13 @@ p  { margin-bottom: .75rem; }
 /* ====================================================
    NOS QUALIFICATIONS
    ==================================================== */
+.qualif-section-logo {
+  display: block;
+  margin: 20px auto 40px;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
 .qualif-brand-banner {
   display: flex;
   align-items: center;
