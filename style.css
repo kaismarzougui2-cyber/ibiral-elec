@@ -878,45 +878,106 @@ p  { margin-bottom: .75rem; }
 /* ====================================================
    NOS QUALIFICATIONS
    ==================================================== */
-.qualif-card-merged {
-  margin-top: 8px;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.qualif-brand {
+.qualif-brand-banner {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
-  margin-bottom: 28px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid var(--border);
+  margin: 0 auto 40px;
+  padding: 18px 32px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  max-width: 360px;
 }
 .qualifelec-logo {
-  height: 52px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 .qualif-brand-label {
   font-family: var(--font-head);
-  font-size: .85rem;
+  font-size: .82rem;
   font-weight: 600;
-  letter-spacing: .06em;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+}
+.qualif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.qualif-card {
+  background: #F8FAFD;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px 26px;
+}
+.qualif-card-sub {
+  font-size: .78rem;
+  font-family: var(--font-head);
+  letter-spacing: .05em;
   text-transform: uppercase;
   color: var(--text-muted);
+  margin-bottom: 20px;
+  margin-top: -6px;
 }
-.qualif-block { margin-bottom: 24px; }
-.qualif-block:last-child { margin-bottom: 0; }
+.qualif-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(245,166,35,.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.qualif-card h3 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+.qualif-card p { color: var(--text-muted); font-size: .9rem; margin-bottom: 10px; }
+.qualif-spec {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.qualif-spec-label {
+  display: block;
+  font-family: var(--font-head);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+.qualif-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+.qualif-badge {
+  background: rgba(26,111,212,.08);
+  border: 1px solid rgba(26,111,212,.2);
+  color: var(--blue);
+  font-family: var(--font-head);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  padding: 4px 11px;
+  border-radius: 20px;
+}
+.qualif-badge-p1 { background: rgba(34,197,94,.1);  border-color: rgba(34,197,94,.35);  color: #15803d; }
+.qualif-badge-p2 { background: rgba(245,166,35,.12); border-color: rgba(245,166,35,.4);  color: #92400e; }
+.qualif-badge-p3 { background: rgba(239,68,68,.1);  border-color: rgba(239,68,68,.3);   color: #b91c1c; }
 .qualif-sub {
-  margin-top: 20px;
-  padding-top: 18px;
+  margin-top: 18px;
+  padding-top: 16px;
   border-top: 1px dashed var(--border);
 }
 .qualif-sub-title {
   font-family: var(--font-head);
-  font-size: .85rem;
-  font-weight: 600;
+  font-size: .78rem;
+  font-weight: 700;
   letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--navy);
@@ -924,53 +985,7 @@ p  { margin-bottom: .75rem; }
   padding-left: 10px;
   border-left: 3px solid var(--yellow);
 }
-.qualif-block-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-.qualif-block-head .qualif-icon { margin-bottom: 0; }
-.qualif-block-head h3 { margin: 0; }
-.qualif-block-sep {
-  height: 1px;
-  background: var(--border);
-  margin: 24px 0;
-}
-.qualif-card {
-  background: #F8FAFD;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 36px 30px;
-}
-.qualif-icon {
-  width: 56px;
-  height: 56px;
-  background: rgba(245,166,35,.12);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.qualif-card h3 {
-  color: var(--navy);
-  font-size: 1.2rem;
-  margin-bottom: 14px;
-}
-.qualif-card p { color: var(--text-muted); font-size: .93rem; margin-bottom: 20px; }
-.qualif-badges { display: flex; flex-wrap: wrap; gap: 8px; }
-.qualif-badge {
-  background: rgba(26,111,212,.08);
-  border: 1px solid rgba(26,111,212,.2);
-  color: var(--blue);
-  font-family: var(--font-head);
-  font-size: .75rem;
-  letter-spacing: .06em;
-  padding: 4px 12px;
-  border-radius: 20px;
-}
-@media (max-width: 640px) { .qualif-grid { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .qualif-grid { grid-template-columns: 1fr; } }
 
 /* ====================================================
    WHATSAPP FLOAT
