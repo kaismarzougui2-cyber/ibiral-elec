@@ -798,30 +798,16 @@ p  { margin-bottom: .75rem; }
   color: var(--navy);
 }
 .client-sep { color: var(--yellow); font-size: 1.8rem; }
-.client-group-eiffage {
+.client-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 10px;
 }
-.eiffage-logo {
-  height: 36px;
+.client-logo {
+  height: 44px;
   width: auto;
-  object-fit: contain;
-  display: block;
-  filter: grayscale(0);
-}
-.client-group-carl {
-  display: flex;
-  align-items: center;
-  gap: 12px 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.carl-logo {
-  height: 36px;
-  width: auto;
+  max-width: 140px;
   object-fit: contain;
   display: block;
 }
