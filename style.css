@@ -1390,10 +1390,26 @@ p  { margin-bottom: .75rem; }
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   font-size: .82rem;
   color: var(--text-muted);
 }
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #0A66C2;
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  padding: 7px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.linkedin-btn:hover { background: #004182; color: #fff; }
 .legal-mentions {
   border-top: 1px solid var(--border);
   padding: 18px 0;
