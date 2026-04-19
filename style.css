@@ -307,12 +307,12 @@ p  { margin-bottom: .75rem; }
   height: 52px;
   width: auto;
   object-fit: contain;
-  opacity: .15;
-  filter: grayscale(1) brightness(0);
+  opacity: .35;
+  filter: none;
 }
 .section-dark .section-logo-deco {
-  opacity: .08;
-  filter: grayscale(1) brightness(0);
+  opacity: .25;
+  filter: none;
 }
 .logo-text { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
 .logo-ibiral { color: #1A6FD4; }   /* Deep Blue pilier */
